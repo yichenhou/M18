@@ -1,0 +1,238 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+body {
+    background-color: #082B59;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    line-height: 2;
+  }
+  h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+  }
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+  /* make images flexible */
+  img {
+    max-width: 100%;
+  }
+  a {
+    color: #59331d;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  header {
+    border-bottom: 10px solid #d98555;
+  }
+  /* navbar styling */
+  nav ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  nav li {
+    margin: 0 1rem 1rem 1rem;
+    font-size: 1.3rem;
+    /* border: 1px dashed white; */
+    text-align: center;
+  }
+  /* max width on the image in pixels */
+  nav .logo img {
+    max-width: 150px;
+  }
+  /* flex basis on the image container, li */
+  nav .logo {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+  }
+  nav a:hover {
+    color: #d98555;
+  }
+  /* establishes a white background */
+  .main-bkgd {
+    background: #ffffff url(https://assets.codepen.io/6306176/gulp-bean-bkgd.jpg) repeat-x bottom;
+    padding-bottom: 300px;
+  }
+  /* sits inside of the white background, centered */
+  .main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    justify-content: space-between;
+    /* border: 1px dashed red; */
+  }
+  .main-bkgd h1 {
+    flex-basis: 100%;
+  }
+  .container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  .card1, .card2, .card3 {
+    flex-basis: 100%;
+    border-radius: 10px;
+    /* border: 1px dashed blue; */
+  }
+  .card1 h2, .card2 h2, .card3 h2, .card1 h3, .card2 h3, .card3 h3, .card1 p, .card2 p, .card3 p {
+  padding: 0 1rem;
+  }
+  .card1 img, .card2 img, .card3 img {
+    border-radius: 10px;
+    width: 100%;
+  } 
+  .horizontalcoffeeimage, .horizontalmenuimage {
+    border-radius: 10px;
+    width: 100%;
+  }
+  .verticalcoffeeimage {
+    display: none;
+    border-radius: 10px;
+  }
+  /* Tablet Screen Size */
+  @media (min-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    .main {
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        width: 90%;
+    }
+    .horizontalcoffeeimage {
+        display: none;
+        /* border: 1px dashed orange; */
+    }
+    .verticalcoffeeimage, .horizontalmenuimage {
+        /* border: 1px dashed blue; */
+        display: block;
+    }
+    .card1, .card2, .card3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+  }
+  /* Desktop Screen Size */
+  @media (min-width: 992px) {
+    nav ul {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        align-items: center;
+        /* border: 1px dashed yellow; */
+    }
+    nav li {
+        /* border: 1px dashed white; */
+        margin: 0;
+    }
+    nav .logo {
+        grid-column: 1/2;
+        padding: 1rem;
+    }
+    nav .menu-about {
+        grid-column: 4/5;
+        text-align: right;
+    }
+    nav .menu-products {
+        grid-column: 5/6;
+        text-align: right;
+    }
+    nav .menu-contact {
+        grid-column: 6/7;
+        text-align: right;
+    }
+    .main {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        margin: 0 auto;
+        width: 90%;
+        padding-top: 2rem;
+    }
+    .horizontalcoffeeimage, .horizontalmenuimage {
+        display: block;
+        width: 100%;
+    }
+    .verticalcoffeeimage {
+        display: none;
+    }
+    .container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .card1, .card3 {
+        flex-basis: 30%;
+        display: flex;
+        flex-flow: row wrap;
+        border-radius: 10px;
+        /* border: 1px dashed blue; */
+    }
+    .card2 {
+        flex-basis: 30%;
+        display: flex;
+        flex-flow: row wrap-reverse;
+        border-radius: 10px;
+        /* border: 1px dashed blue; */
+    }
+  }
+  .button {
+    display: inline-block;
+    background-color: #59331D;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    color: #f2f2f2;
+    text-decoration: none;
+    border: 3px solid #59331d;
+  }
+  .button:hover {
+    background-color: #f2f2f2;
+    color: #59331d;
+  }
+  footer {
+    color: #f2f2f2;
+    text-align: center;
+    border-top: 10px solid #d98555;
+  }
+  footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  footer a {
+    color: #f2f2f2;
+    font-size: 2rem;
+    display: block;
+    margin: 0 1rem 3rem 1rem;
+  }
